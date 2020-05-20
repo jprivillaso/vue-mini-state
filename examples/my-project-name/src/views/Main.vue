@@ -24,7 +24,7 @@ import { setFormDataProp } from "@/commons/observable";
 
 import Input from '@/components/form/Input.vue';
 import Button from '@/components/form/Button.vue';
-import { getFormData, setFormData, getFormDataProp } from "../commons/observable";
+import { getState, setState } from "../commons/observable";
 
 export default Vue.extend({
   name: "Main",
@@ -32,7 +32,7 @@ export default Vue.extend({
     Input
   },
   beforeMount() {
-    setFormData({
+    setState({
       form: {
         customer: {
           name: 'Juan'
@@ -48,7 +48,7 @@ export default Vue.extend({
   methods: {
     update(event) {
       event.preventDefault();
-      console.log(getFormDataProp('page1'));
+      console.log(getState('page1'));
     }
   }
 });

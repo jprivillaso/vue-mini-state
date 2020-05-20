@@ -6,11 +6,15 @@ const observable: any = Vue.observable({
   state: {}
 });
 
-export const setFormData = (formData: any) => {
-  observable.state = Object.assign({}, formData);
+export const setState = (data: any, prop?: string) => {
+  if (prop) {
+    setStateProp(prop, data)
+  } else {
+    observable.state = Object.assign({}, data);
+  }
 };
 
-export const setFormDataProp = (prop: string, data: any) => {
+const setStateProp = (prop: string, data: any) => {
   observable.state = Object.assign({},
     deepMerge(
       observable.state,
@@ -19,11 +23,12 @@ export const setFormDataProp = (prop: string, data: any) => {
   );
 }
 
-export const getFormData = () => {
+export const getState = (prop: string) => {
+  if (prop) return getStateProp(prop);
   return observable.state;
 }
 
-export const getFormDataProp = (prop: string) => {
+const getStateProp = (prop?: string) => {
   if (!prop) return null;
 
   const propValue = reduceObjectValue(prop, observable.state);

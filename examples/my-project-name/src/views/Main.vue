@@ -20,8 +20,6 @@
 <script lang="ts">
 import Vue from "vue";
 
-import { setFormDataProp } from "@/commons/observable";
-
 import Input from '@/components/form/Input.vue';
 import Button from '@/components/form/Button.vue';
 import { getState, setState } from "../commons/observable";
@@ -46,8 +44,8 @@ export default Vue.extend({
     });
   },
   methods: {
-    update(event) {
-      event.preventDefault();
+    update(event: Event) {
+      event.stopPropagation();
       console.log(getState('page1'));
     }
   }

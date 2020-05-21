@@ -45,7 +45,9 @@ export default Vue.extend({
   },
   methods: {
     update(event: Event) {
-      event.stopPropagation();
+      event.preventDefault();
+      setState(20, 'page1.customer.age')
+      setState('Danny', 'form.customer.name')
       console.log(getState('page1'));
     }
   }

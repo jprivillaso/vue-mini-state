@@ -1,0 +1,30 @@
+{
+  "name": "omni_state",
+  "version": "1.0.0",
+  "description": "State Management for Vuejs",
+  "main": "src/index.ts",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jprivillaso/omni_state.git"
+  },
+  "keywords": [
+    "vue",
+    "state",
+    "state-management"
+  ],
+  "author": "Juan Rivillas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jprivillaso/omni_state/issues"
+  },
+  "homepage": "https://github.com/jprivillaso/omni_state#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}

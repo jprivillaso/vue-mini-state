@@ -2,13 +2,13 @@ import {
   reduceObjectValue,
   applyNestedValue,
   deepMerge
-} from '../../../src/transformers';
+} from '../../src/transformers';
 
 import {
   setState,
   getState,
   resetState
-} from '../../../src';
+} from '../../src';
 
 const formData = {
   a: {

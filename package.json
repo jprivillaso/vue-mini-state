@@ -8,11 +8,12 @@
   },
   "scripts": {
     "build": "tsc",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jprivillaso/omni_state.git"
+    "url": "git+https://github.com/jprivillaso/vue-mini-state.git"
   },
   "keywords": [
     "vue",
@@ -22,9 +23,9 @@
   "author": "Juan Rivillas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jprivillaso/omni_state/issues"
+    "url": "https://github.com/jprivillaso/vue-mini-state/issues"
   },
-  "homepage": "https://github.com/jprivillaso/omni_state#readme",
+  "homepage": "https://github.com/jprivillaso/vue-mini-state#readme",
   "dependencies": {
     "vue": "^2.6.11"
   },
@@ -58,5 +59,6 @@
       "it",
       "expect"
     ]
-  }
+  },
+  "types": "dist/index.d.ts"
 }

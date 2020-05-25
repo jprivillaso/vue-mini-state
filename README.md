@@ -16,9 +16,20 @@ I needed to find a way to create an easy validation mechanism that could be inte
 
 ## API
 
-- getState
-- setState
-- resetState
+- *getState()*
+Returns the entire state.
+
+- *getState(path)*
+Returns the value of the path inside the state.
+
+- *setState(data)*
+Makes the **data** object to be the entire state. It will be set at the root.
+
+- *setState(data, path)*
+Updates the state at the specified path.
+
+- *resetState()*
+Resets the entire state to its initial value.
 
 ## Getting Started
 

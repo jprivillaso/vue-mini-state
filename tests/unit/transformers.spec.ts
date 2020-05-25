@@ -136,32 +136,32 @@ describe('Data transformers used during validation', () => {
   });
 
   it('It should set the value of an item whose structure does not exist', () => {
-    setState(1290, 'page2.costsRoom[0].meter_id');
-    expect(getState('page2.costsRoom[0].meter_id')).toEqual(1290);
+    setState(1290, 'a.b[0].c');
+    expect(getState('a.b[0].c')).toEqual(1290);
   });
 
   it('It must merge two items that are inside an array at the same position', () => {
     resetState();
 
     setState({
-      page2: {
-        costsRoom: [
+      a: {
+        b: [
           {
-            meter_id: 12
+            c: 12
           }
         ]
       }
     });
 
-    setState(20, 'page2.costsRoom[0].meter_id');
-    setState(1000, 'page2.costsRoom[0].meter_reading');
+    setState(20, 'a.b[0].c');
+    setState(1000, 'a.b[0].d');
 
     const expected = {
-      page2: {
-        costsRoom: [
+      a: {
+        b: [
           {
-            meter_id: 20,
-            meter_reading: 1000
+            c: 20,
+            d: 1000
           }
         ]
       }

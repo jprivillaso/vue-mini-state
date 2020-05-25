@@ -31,11 +31,11 @@ $ npm install vue-mini-state
 vue-mini-state relies on strings that represent the paths that will be used inside the state.
 For example: The path *customer.street.number* represents the path to an object that looks like this:
 
-```json
-state = {
-  customer: {
-    street: {
-      number: // any value here
+```js
+const state = {
+  "customer": {
+    "street": {
+      "number": 5 // any value here
     }
   }
 }

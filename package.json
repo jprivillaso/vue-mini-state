@@ -4,7 +4,8 @@
   "description": "State Management for Vuejs",
   "main": "src/index.ts",
   "directories": {
-    "example": "examples"
+    "src": "src",
+    "tests": "tests"
   },
   "scripts": {
     "build": "tsc",
@@ -20,7 +21,7 @@
     "state",
     "state-management"
   ],
-  "author": "Juan Rivillas",
+  "author": "Juan Pablo Rivillas",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jprivillaso/vue-mini-state/issues"

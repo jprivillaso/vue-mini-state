@@ -13,10 +13,10 @@ export const reduceObjectValue = (
         10
       );
 
-      return o[key] ? o[key][arrayIndex] : [];
+      return o && o[key] ? o[key][arrayIndex] : [];
     }
 
-    return o && o[x] ? o[x] : {};
+    return o[x] ?? {};
   }, obj
 );
 
@@ -71,9 +71,9 @@ const mergeArrays = (
   const mergedArray: any[] = [];
 
   for (let i = 0; i < max; i++) {
-    if (!source[i]) {
+    if (source[i] === null || source[i] === undefined) {
       mergedArray[i] = target[i];
-    } else if (!target[i]) {
+    } else if (target[i] == null || target[i] === undefined) {
       mergedArray[i] = source[i];
     } else {
       // eslint-disable-next-line

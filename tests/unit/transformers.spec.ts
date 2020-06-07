@@ -169,4 +169,14 @@ describe('Data transformers used during validation', () => {
 
     expect(getState()).toEqual(expected);
   });
+
+  it.only('It should set properly nested data whose value is 0', () => {
+    resetState();
+
+    setState(0, 'a.b.c');
+    setState(0, 'a.d[0]');
+
+    expect(getState('a.b.c')).toEqual(0);
+    expect(getState('a.d[0]')).toEqual(0);
+  });
 });

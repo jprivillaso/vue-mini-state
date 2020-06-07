@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc",
     "test:unit": "vue-cli-service test:unit",
-    "prepublish": "tsc"
+    "prepare": "tsc"
   },
   "repository": {
     "type": "git",

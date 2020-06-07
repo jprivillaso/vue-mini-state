@@ -87,4 +87,4 @@ See [the contribution guide](./CONTRIBUTE.md)
 
 ## Download from NPM
 
-[https://www.npmjs.com/package/vue-mini-state](NPM Package. Download it here!)
+[NPM Package. Download it here!](https://www.npmjs.com/package/vue-mini-state)

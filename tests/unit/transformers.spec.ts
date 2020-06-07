@@ -170,7 +170,7 @@ describe('Data transformers used during validation', () => {
     expect(getState()).toEqual(expected);
   });
 
-  it.only('It should set properly nested data whose value is 0', () => {
+  it('It should set properly nested data whose value is 0', () => {
     resetState();
 
     setState(0, 'a.b.c');
@@ -178,5 +178,17 @@ describe('Data transformers used during validation', () => {
 
     expect(getState('a.b.c')).toEqual(0);
     expect(getState('a.d[0]')).toEqual(0);
+  });
+
+  it.only('It should set properly nested data from the README\'s docs', () => {
+    resetState();
+
+    setState(16, 'customer.street.number');
+    setState({ name: 'Juan' }, 'customer');
+
+    console.log(getState());
+
+    expect(getState('customer.street.number')).toEqual(16);
+    expect(getState('customer.name')).toEqual('Juan');
   });
 });

@@ -7,12 +7,9 @@ vue-mini-state uses object manipulations in order to merge multiple paths inside
 
 ## Motivation
 
-Two of the hardest things to achieve in a frontend project are:
+State Management is something that always lead you to use a complex third-party library or is either something complex to build from scratch. vue-mini-state is intended to be used still as a third party library but it is extremely small and it uses Vue js native Observable, which in my opinion is very good and should be used more broadly.
 
-- State Management
-- Form Validation
-
-I needed to find a way to create an easy validation mechanism that could be integrated with a state management. It was a requirement that I needed to implement from scratch for my company. Thus, I ended up creating this state management lib, that can also be integrated with a validation mechanism.
+I needed to find a way to create a state management that could be used easily inside the directive `v-for` and inside the HTML templates. As a result, I created this lightweight lib that might be useful for you as it's being useful for me in my Vue projects.
 
 ## API
 
@@ -65,14 +62,24 @@ getState('customer.street.number') // This will return 16;
  * This will return
  *
  * {
- *   name: 'Juan',
- *   street: {
- *     number: 16
+ *   customer: {
+ *     name: 'Juan',
+ *     street: {
+ *       number: 16
+ *     }
  *   }
  * }
  */
-getState('customer');
+getState();
 ```
+
+**IMPORTANT**
+
+As you can see, vue-mini-state works very well for scenarios in which you are going to populate multiple attributes from an object from different places. Moreover, it works assuming that you need the objects to be merged, not replaced.
+
+## Get Rid of the v-model
+
+This sound a bit scary at the beggining, but the truth is that you can get rid of the v-model in your top level components and create easily a new Form with only path declarations. I will create a guide that explains to you how to use the vue-mini-state with a Web Components' library and allow you to create forms in a very fast way. Wait for it! :)
 
 ## Contribute
 

@@ -75,7 +75,7 @@ getState();
 
 **IMPORTANT**
 
-As you can see, vue-mini-state works very well for scenarios in which you are going to populate multiple attributes from an object from different places. Moreover, it works assuming that you need the objects to be merged, not replaced.
+As you can see, vue-mini-state works very well for scenarios in which you are going to populate multiple attributes of an object from different events/places. Moreover, it works assuming that you need the objects to be merged, not replaced.
 
 ## Get Rid of the v-model
 

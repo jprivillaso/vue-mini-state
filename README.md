@@ -84,3 +84,7 @@ This sound a bit scary at the beggining, but the truth is that you can get rid o
 ## Contribute
 
 See [the contribution guide](./CONTRIBUTE.md)
+
+## Download from NPM
+
+[https://www.npmjs.com/package/vue-mini-state](NPM Package. Download it here!)

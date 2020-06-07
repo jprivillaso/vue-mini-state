@@ -1,6 +1,6 @@
 {
   "name": "vue-mini-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "State Management for Vuejs",
   "main": "src/index.ts",
   "directories": {

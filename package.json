@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/jprivillaso/vue-mini-state#readme",
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",
